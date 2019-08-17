@@ -5,5 +5,9 @@
         public function index(){
             $this->set('posts', $this->Posts->find('all'));
         }
+
+        public function add() {
+            
+        }
     }
 ?>
