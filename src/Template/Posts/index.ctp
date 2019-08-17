@@ -1,8 +1,12 @@
+
 <div class="row">
-  <h2>Viw All Posts</h2>
+<?php echo $this->Flash->render('message');?>
 </div>
 <div class="row">
-  <?php echo $this->Html->link('Add Post', ['action'=>'add'], ['class'=>'btn btn-primary']);?>
+  <h2>View All Posts</h2>
+</div>
+<div class="row">
+  <?php echo $this->Html->link('ADD NEW POST', ['action'=>'add'], ['class'=>'btn btn-primary']);?>
 </div>
 <div class="row">
   <table class="table table-hover">
@@ -20,7 +24,9 @@
       <tr class="table-active">
         <td><?php echo $post->title ?></td>
         <td><?php echo $post->description ?></td>
-        <td>Column content</td>
+        <td>
+          <?php echo $this->Html->link('View', ['action'=>'view', $post->id], ['class'=>'btn btn-primary'])?>
+        </td>
       </tr>
   <?php endforeach;?>
     <?php else:?>

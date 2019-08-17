@@ -1,4 +1,4 @@
-
+<?php echo $this->Form->create($posts);?>
 <fieldset>
     <legend>Add Post</legend>
     <div class="form-group row">
@@ -16,3 +16,4 @@
     <?php echo $this->Form->button(__('Add Post'), ['class'=>'btn btn-primary']);?>
     <?php echo $this->Html->link('Back', ['action'=>'index'], ['class'=>'btn btn-primary'])?>
   </fieldset>
+<?php echo $this->Form-end();?>

@@ -49,12 +49,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
             </ul>
             </form>
         </div>
