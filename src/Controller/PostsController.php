@@ -23,5 +23,18 @@
             $posts = $this->Posts->get($id);
             $this->set('post', $posts);
         }
+
+        public function edit() {
+
+        }
+
+        public function delete($id = Null) {
+            $this->request->allowMethod(['post', 'delete']);
+            $post = $this->Posts->get($id);
+            if($this->Posts->delete($post)) {
+                $this->Flash->success('Post Deleted Succesfully', ['key'=>'message']);
+                    return $this->redirect(['action'=>'index']);
+            }
+        }
     }
 ?>

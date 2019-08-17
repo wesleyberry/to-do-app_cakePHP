@@ -26,6 +26,14 @@
         <td><?php echo $post->description ?></td>
         <td>
           <?php echo $this->Html->link('View', ['action'=>'view', $post->id], ['class'=>'btn btn-primary'])?>
+          <?php echo $this->Html->link('Edit', ['action'=>'edit', $post->id], ['class'=>'btn btn-success'])?>
+          <?= $this->Form->postLink(
+            'Delete',
+            ['action' => 'delete', $post->id],
+            ['class'=>'btn btn-danger'],
+            ['confirm'=>'Are you sure?']
+          )
+          ?>
         </td>
       </tr>
   <?php endforeach;?>
