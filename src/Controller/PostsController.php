@@ -24,8 +24,17 @@
             $this->set('post', $posts);
         }
 
-        public function edit() {
-
+        public function edit($id = Null) {
+            $post = $this->Posts->get($id);
+            if($this->request->is('put')) {
+                $post = $this->Posts->patchEntity($post, $this->request->getData());
+                if($this->Posts->save($post)) {
+                    $this->Flash->success('Post Edited Successfully', ['key'=>'message']);
+                    return $this->redirect(['action'=>'index']);
+                }
+                $this->Flash->error(__('Unable to update your post'));
+            }
+            $this->set('post', $post);
         }
 
         public function delete($id = Null) {

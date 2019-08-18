@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <?php echo $this->Form->button(__('Add Post'), ['class'=>'btn btn-primary']);?>
+    <?php echo $this->Form->button(__('Edit Post'), ['class'=>'btn btn-primary']);?>
     <?php echo $this->Html->link('Back', ['action'=>'index'], ['class'=>'btn btn-primary'])?>
   </fieldset>
 <?php echo $this->Form-end();?>
